@@ -91,6 +91,7 @@ const SignupForm = () => {
         <div className="signup-container">
           <div className="form-header">
             <div className="form-logo">
+              <img src="/images/logo.png" alt="Logo" />
             </div>
             <div className="theme-toggle">
               <button className="toggle-btn" onClick={toggleTheme}>
