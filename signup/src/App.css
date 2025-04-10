@@ -43,7 +43,7 @@ body {
 .signup-image {
   flex: 1;
   min-height: 500px;
-  background: url("/images/backgroundPicture.jpg") center center / cover
+  background: url("../public/images/backgroundPicture.jpg") center center / cover
     no-repeat;
 }
 

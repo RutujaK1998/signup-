@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React from "react";
-import SignupForm from "./SignupForm";
+import SignupForm from "../src/SignUpForm"
 
 function App() {
   return <SignupForm />;
