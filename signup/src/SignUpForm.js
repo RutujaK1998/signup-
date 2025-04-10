@@ -11,7 +11,7 @@ const SignupForm = () => {
   });
 
   const [errors, setErrors] = useState({});
-  const [isDarkTheme, setIsDarkTheme] = useState(true);
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const validateField = (name, value) => {
