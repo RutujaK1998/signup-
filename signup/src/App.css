@@ -176,7 +176,7 @@ body {
 }
 
 .form-logo img {
-  height: 40px;
+  height: 90px;
   width: auto;
   display: block;
 }
@@ -191,4 +191,19 @@ body {
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s ease;
+}
+.login-redirect {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.login-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
 }

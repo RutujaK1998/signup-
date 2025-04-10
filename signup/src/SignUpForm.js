@@ -159,6 +159,12 @@ const SignupForm = () => {
             <div>
               <button type="submit">Sign Up</button>
             </div>
+            <div className="login-redirect">
+              Already have an account?{" "}
+              <a href="/signin" className="login-link">
+                Login
+              </a>
+            </div>
           </form>
           {isSubmitted && (
             <div className="success-message">
@@ -168,6 +174,20 @@ const SignupForm = () => {
               </button>
             </div>
           )}
+
+          <footer className="signup-footer">
+            <p>
+              📞 Contact us at{" "}
+              <a href="mailto:support@directlyApply.com">
+                support@directlyApply.com
+              </a>
+            </p>
+            <p>📍London</p>
+            <p>
+              &copy; {new Date().getFullYear()} Counter Group Limited. All
+              rights reserved.
+            </p>
+          </footer>
         </div>
       </div>
     </div>
