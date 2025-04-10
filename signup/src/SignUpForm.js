@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaToggleOn } from "react-icons/fa";
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({
@@ -82,9 +83,93 @@ const SignupForm = () => {
   const toggleTheme = () => setIsDarkTheme((prev) => !prev);
 
   return (
-<div>
-
-</div>
+    <div
+      className={`signup-wrapper ${isDarkTheme ? "dark-theme" : "light-theme"}`}
+    >
+      <div className="signup-card">
+        <div className="signup-image" />
+        <div className="signup-container">
+          <div className="form-header">
+            <div className="form-logo">
+            </div>
+            <div className="theme-toggle">
+              <button className="toggle-btn" onClick={toggleTheme}>
+                <FaToggleOn size={24} color={isDarkTheme ? "#fff" : "#333"} />
+              </button>
+            </div>
+          </div>
+          <h2>Signup Form</h2>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label>Name</label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+              />
+              {errors.name && <span>{errors.name}</span>}
+            </div>
+            <div>
+              <label>Email</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+              />
+              {errors.email && <span>{errors.email}</span>}
+            </div>
+            <div>
+              <label>Password</label>
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleInputChange}
+              />
+              {errors.password && <span>{errors.password}</span>}
+            </div>
+            <div>
+              <label>Confirm Password</label>
+              <input
+                type="password"
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleInputChange}
+              />
+              {errors.confirmPassword && <span>{errors.confirmPassword}</span>}
+            </div>
+            <div>
+              <label>How did you find out about us?</label>
+              <select
+                name="referralSource"
+                value={formData.referralSource}
+                onChange={handleInputChange}
+              >
+                <option value="">Select an option</option>
+                <option value="Google">Google</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Friend">Friend</option>
+                <option value="Job Board">Job Board</option>
+              </select>
+              {errors.referralSource && <span>{errors.referralSource}</span>}
+            </div>
+            <div>
+              <button type="submit">Sign Up</button>
+            </div>
+          </form>
+          {isSubmitted && (
+            <div className="success-message">
+              <p>Signup successful!</p>
+              <button onClick={() => (window.location.href = "/signin")}>
+                Back to Signin
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
   );
 };
 
